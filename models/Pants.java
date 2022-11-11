@@ -15,7 +15,11 @@ public class Pants extends Product {
             this.waist = source.waist;
         }
 
-        public void setWaist(int waist) {
+    public int getWaist() {
+        return waist;
+    }
+
+    public void setWaist(int waist) {
             this.waist = waist;
         }
 
@@ -33,5 +37,15 @@ public class Pants extends Product {
     @Override
     public int hashCode() {
         return Objects.hash(waist, super.getPrice(), super.getColor(), super.getBrand());
+    }
+
+    @Override
+    public String toString() {
+        return "Pants{" +
+                "waist=" + getWaist() + "'" +
+                "price='" + super.getPrice() + "'" +
+                "color='" + super.getColor() + "'" +
+                "brand='" + super.getBrand() + "'" +
+                '}';
     }
 }
