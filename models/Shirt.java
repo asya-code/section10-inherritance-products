@@ -2,7 +2,7 @@ package models;
 
 import java.util.Objects;
 
-public class Shirt extends Product{
+public class Shirt extends Product {
     /**
      * Limiting the number of values for size:
      * introduce enum variable Size and change return statement

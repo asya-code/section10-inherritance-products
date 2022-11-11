@@ -2,7 +2,7 @@ package models;
 
 import java.util.Objects;
 
-public class Pants extends Product {
+public class Pants extends Product implements Discountable {
         private int waist;
 
         public Pants(int waist, double price, String color, String brand) {
@@ -23,6 +23,10 @@ public class Pants extends Product {
                 this.waist = waist;
         }
 
+    @Override
+    public void discount() {
+        super.setPrice(super.getPrice()/2);
+    }
 
     @Override
     public boolean equals(Object o) {
