@@ -3,9 +3,19 @@ package models;
 import java.util.Objects;
 
 public class Shirt extends Product{
-    private String size;
+    /**
+     * Limiting the number of values for size:
+     * introduce enum variable Size and change return statement
+     * from String (which can be anything) to enum Size (which is limited)
+     *
+     * the constructor, getters and setters also have to be updated accordingly
+     */
+    public enum Size {
+        SMALL, MEDIUM, LARGE
+    }
+    private Size size;
 
-    public Shirt(String size, double price, String color, String brand) {
+    public Shirt(Size size, double price, String color, String brand) {
         super(price, color, brand);
         this.size = size;
     }
@@ -15,8 +25,12 @@ public class Shirt extends Product{
         this.size = source.size;
     }
 
-    public String getSize() {
-        return size;
+    public Size getSize() {
+        return this.size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
     }
 
     @Override
