@@ -1,6 +1,6 @@
 package models;
 
-public abstract class Product {
+public abstract class Product implements Comparable <Product> {
     private double price;
     private String color;
     private String brand;
@@ -43,4 +43,9 @@ public abstract class Product {
     }
 
     public abstract void fold();
+
+    @Override
+    public int compareTo(Product specifiedObject) {
+        return (int) Math.round(this.getPrice() - specifiedObject.getPrice());
+    }
 }
