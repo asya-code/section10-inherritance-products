@@ -15,13 +15,14 @@ public class Pants extends Product {
             this.waist = source.waist;
         }
 
-    public int getWaist() {
-        return waist;
-    }
-
-    public void setWaist(int waist) {
-            this.waist = waist;
+        public int getWaist() {
+            return waist;
         }
+
+        public void setWaist(int waist) {
+                this.waist = waist;
+        }
+
 
     @Override
     public boolean equals(Object o) {
@@ -47,5 +48,12 @@ public class Pants extends Product {
                 "color='" + super.getColor() + "'" +
                 "brand='" + super.getBrand() + "'" +
                 '}';
+    }
+
+    @Override
+    public void fold() {
+        System.out.println("Hold pants upright \n" +
+                "Fold one leg over the other \n" +
+                "Fold pants from bottom in thirds");
     }
 }

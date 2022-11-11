@@ -34,6 +34,14 @@ public class Shirt extends Product{
     }
 
     @Override
+    public void fold() {
+        System.out.println("Lay shirt on the flat surface \n" +
+                "Fold the shirt sideways \nBring sleeves in \n" +
+                "Fold from bottom up");
+
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
